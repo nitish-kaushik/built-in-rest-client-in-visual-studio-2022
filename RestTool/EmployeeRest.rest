@@ -1,0 +1,30 @@
+@id=100
+@baseUrl = https://localhost:7289
+
+
+
+###
+# Get all employees
+GET {{baseUrl}}/api/employee
+
+###
+# Get employee by using the Id
+GET {{baseUrl}}/api/employee/{{id}}
+
+### Add a new API
+# Pass the data in the body
+# Make sure to pass the correct content type
+POST {{baseUrl}}/api/employee
+Content-Type: application/json
+
+{
+    "id": 0,
+    "name": "nitish kaushik updated",
+    "email": "testing@sample.com"
+}
+
+###
+PUT {{baseUrl}}/api/employee/{{id}}
+Content-Type: application/json
+
+"nitish kaushik"
